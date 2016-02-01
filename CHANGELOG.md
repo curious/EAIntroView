@@ -4,6 +4,10 @@
 
 * Adds description label side margins property
 
+##Version 2.8.3
+
+# Left align title and desc
+
 ## Version 2.8.2
 
 # Update some frames for Curious fork
