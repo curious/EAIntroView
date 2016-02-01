@@ -363,6 +363,10 @@
         titleImageView.tag = kTitleImageViewTag;
         titleImageView.translatesAutoresizingMaskIntoConstraints = NO;
         
+        CGRect oldFrame = page.titleIconView.frame;
+        page.titleIconView.frame = CGRectMake(oldFrame.origin.y, oldFrame.origin.x + 20, oldFrame.size.width - 40, oldFrame.size.height - 40);
+
+        
         [pageView addSubview:titleImageView];
         [pageView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-topSpace@250-[titleImageView(imageHeight)]" options:NSLayoutFormatAlignAllTop metrics:@{@"imageHeight" : @(page.titleIconView.frame.size.height), @"topSpace" : @(page.titleIconPositionY)} views:@{@"titleImageView" : titleImageView}]];
         [pageView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[titleImageView(imageWidth)]" options:0 metrics:@{@"imageWidth" : @(page.titleIconView.frame.size.width)} views:@{@"titleImageView" : titleImageView}]];
@@ -386,7 +390,7 @@
         NSLayoutConstraint *weakConstraint = [NSLayoutConstraint constraintWithItem:pageView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:titleLabel attribute:NSLayoutAttributeTop multiplier:1.0 constant:page.titlePositionY];
         weakConstraint.priority = UILayoutPriorityDefaultLow;
         [pageView addConstraint:weakConstraint];
-        [pageView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[titleLabel]-10-|" options:NSLayoutFormatAlignAllTop metrics:nil views:@{@"titleLabel" : titleLabel}]];
+        [pageView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-30-[titleLabel]-30-|" options:NSLayoutFormatAlignAllTop metrics:nil views:@{@"titleLabel" : titleLabel}]];
     }
     
     UITextView *descLabel;
