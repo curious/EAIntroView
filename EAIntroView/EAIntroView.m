@@ -390,7 +390,7 @@
         NSLayoutConstraint *weakConstraint = [NSLayoutConstraint constraintWithItem:pageView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:titleLabel attribute:NSLayoutAttributeTop multiplier:1.0 constant:page.titlePositionY];
         weakConstraint.priority = UILayoutPriorityDefaultLow;
         [pageView addConstraint:weakConstraint];
-        [pageView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-titleMargin-[titleLabel]-titleMargin-|" options:NSLayoutFormatAlignAllTop metrics:nil views:@{@"titleLabel" : titleLabel, @"titleMargin" : @(page.titleSideMargin)}]];
+        [pageView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-titleMargin-[titleLabel]-titleMargin-|" options:NSLayoutFormatAlignAllTop metrics:@{@"titleMargin" : @(page.titleSideMargin)} views:@{@"titleLabel" : titleLabel}]];
     }
     
     UITextView *descLabel;
