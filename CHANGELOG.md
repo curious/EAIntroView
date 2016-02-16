@@ -1,10 +1,10 @@
 # EAIntroView
 
-## Upcoming
+## Version 2.8.4
 
-* Adds description label side margins property
+# Adding a side margin property for the title
 
-##Version 2.8.3
+## Version 2.8.3
 
 # Left align title and desc
 
