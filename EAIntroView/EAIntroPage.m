@@ -6,6 +6,7 @@
 #import "EAIntroPage.h"
 
 #define DEFAULT_DESCRIPTION_LABEL_SIDE_PADDING 25
+#define DEFAULT_TITLE_LABEL_SIDE_MARGIN 30
 #define DEFAULT_TITLE_FONT [UIFont fontWithName:@"HelveticaNeue-Bold" size:16.0]
 #define DEFAULT_LABEL_COLOR [UIColor whiteColor]
 #define DEFAULT_BG_COLOR [UIColor clearColor]
@@ -27,6 +28,7 @@
     if (self = [super init]) {
         _titleIconPositionY = DEFAULT_TITLE_IMAGE_Y_POSITION;
         _titlePositionY  = DEFAULT_TITLE_LABEL_Y_POSITION;
+        _titleSideMargin = DEFAULT_TITLE_LABEL_SIDE_MARGIN;
         _descPositionY   = DEFAULT_DESCRIPTION_LABEL_Y_POSITION;
         _descSideMargin   = DEFAULT_DESCRIPTION_LABEL_SIDE_MARGIN;
         _title = @"";

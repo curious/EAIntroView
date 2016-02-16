@@ -36,6 +36,7 @@ typedef void (^VoidBlock)();
 @property (nonatomic, strong) UIFont *titleFont;
 @property (nonatomic, strong) UIColor *titleColor;
 @property (nonatomic, assign) CGFloat titlePositionY;
+@property (nonatomic, assign) CGFloat titleSideMargin;
 
 @property (nonatomic, strong) NSString *desc;
 @property (nonatomic, strong) UIFont *descFont;
