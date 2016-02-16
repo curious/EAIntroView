@@ -1,5 +1,9 @@
 # EAIntroView
 
+## Version 2.8.5
+
+# Fix crash. Accidentally used views instead of metrics dictionary for auto layout
+
 ## Version 2.8.4
 
 # Adding a side margin property for the title
